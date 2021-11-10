@@ -16,6 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from users.views import *
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('registration/',registrationPage,name='register'),
+    path('',loginPage,name='login'),
+    path('forlogged/',forLogged,name='protected'),
+    path('logout/',logoutUser,name='logout'),
+    path('deleteDevice/<str:pk>/',deleteDevice,name='deleteDevice'),
+    path('updateDevice/<str:pk>/', updateDevice, name='updateDevice'),
+
 ]
