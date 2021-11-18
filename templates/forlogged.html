@@ -41,7 +41,9 @@
         <a href="{% url 'deleteDevice' dev.id %} " class="text-danger"> delete this </a>
         <br>
         <a href="{% url 'updateDevice' dev.id %}" class="text-primary">update this </a>
-    </div>
+        <a href="{% url 'informationDevice' dev.ESN %}" class="text-primary">information </a>
+   
+ </div>
 </div>
     <br/>
 {% endfor %}

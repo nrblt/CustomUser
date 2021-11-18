@@ -27,5 +27,5 @@ urlpatterns = [
     path('logout/',logoutUser,name='logout'),
     path('deleteDevice/<str:pk>/',deleteDevice,name='deleteDevice'),
     path('updateDevice/<str:pk>/', updateDevice, name='updateDevice'),
-
+    path('informationDevice/<str:esn>/', informationDevice, name='informationDevice')
 ]

@@ -123,9 +123,8 @@ def informationDevice(request,esn):
     conn = pymongo.MongoClient('mongodb://127.0.0.1:27017/')
     mydb = conn['db_for_igps']
     informationByEsn = mydb.devices.find({'esn':esn})
-    allMessages = informationByEsn[0]['messages']
-    lastMessages = allMessages[-20:]
-    context = {
-	'information':lastMessages,
+    context=
+    {
+	'information':informationByEsn,
     }
     return render(request,'informationDevice.html',context)
